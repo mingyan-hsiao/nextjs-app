@@ -7,7 +7,7 @@ interface User {
     email: string;
 }
 
-const UsersPage = async () => {
+const UsersPage = async () => {return(
     // const res = await fetch('https://jsonplaceholder.typicode.com/users',
     // // { next: { revalidate: 10 }} // every 10 seconds,
     // { cache: 'no-store' }
@@ -36,6 +36,6 @@ const UsersPage = async () => {
         
         </>
     
-}
+)}
 
 export default UsersPage
