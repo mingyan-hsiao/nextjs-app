@@ -1,5 +1,7 @@
 import React, { use } from 'react'
 import UserList from './userList';
+import Link from 'next/link';
+import styles from './page.module.css';
 
 interface User {
     id: number;
@@ -15,7 +17,10 @@ const UsersPage = async () => {return(
     // ); 
     // const users: User[] = await res.json();
         <>
-            <h1>Users</h1>
+            <div className={styles.container}>
+                <h1>Users</h1>
+                <Link href='/' className='p-2 bg-sky-400 text-white text-xl rounded-full hover:bg-sky-500 '>Back</Link>
+            </div>
             {/* <p>{new Date().toLocaleDateString()}</p> */}
             <table className='table table-border'>
                 <thead>
