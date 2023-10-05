@@ -21,11 +21,12 @@ async function getData() {
 
     return (
     <>
-        {user.map(user => <tr key={user.id}>
-                    <td>{user.name}</td>
-                    <td>{user.email}</td>
-                </tr>)
-                }
+        {user.map(user => 
+                    <tr key={user.id}>
+                        <td>{user.name}</td>
+                        <td>{user.email}</td>
+                    </tr>)
+        }
     
     </>)
   }

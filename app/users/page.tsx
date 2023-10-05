@@ -8,14 +8,12 @@ interface User {
 }
 
 const UsersPage = async () => {
-    const res = await fetch('https://jsonplaceholder.typicode.com/users',
-    // { next: { revalidate: 10 }} // every 10 seconds,
-    { cache: 'no-store' }
+    // const res = await fetch('https://jsonplaceholder.typicode.com/users',
+    // // { next: { revalidate: 10 }} // every 10 seconds,
+    // { cache: 'no-store' }
     
-    ); 
-    const users: User[] = await res.json();
-
-    return (
+    // ); 
+    // const users: User[] = await res.json();
         <>
             <h1>Users</h1>
             {/* <p>{new Date().toLocaleDateString()}</p> */}
@@ -33,13 +31,11 @@ const UsersPage = async () => {
                     <td>{user.email}</td>
                 </tr>)
                 } */}
-           
-
                 </tbody>
                  </table>
         
         </>
-    )
+    
 }
 
 export default UsersPage
