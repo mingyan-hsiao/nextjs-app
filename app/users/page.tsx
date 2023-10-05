@@ -1,4 +1,5 @@
 import React, { use } from 'react'
+import UserList from './userList';
 
 interface User {
     id: number;
@@ -26,11 +27,12 @@ const UsersPage = async () => {
                     </tr>
                 </thead>
                 <tbody>
-                {users.map(user => <tr key={user.id}>
+                    <UserList />
+                {/* {users.map(user => <tr key={user.id}>
                     <td>{user.name}</td>
                     <td>{user.email}</td>
                 </tr>)
-                }
+                } */}
            
 
                 </tbody>
