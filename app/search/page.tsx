@@ -35,12 +35,12 @@ const Page: React.FC = (props) => {
   const [userList, setUserList] = React.useState<
     { name: string; age: number; designation: string }[] | undefined
   >(users);
-  const [text, setText] = React.useState<string>('');
+  const [text, setText] = React.useState<string>(''); // 搜尋框裡面的文字
 
   const handleOnClick = () => {
     const findUsers =
       userList && userList?.length > 0
-        ? userList?.filter((u) => u?.name.toLowerCase().includes(text.toLocaleLowerCase()) )
+        ? userList?.filter((u) => u?.name.toLowerCase().includes(text.toLocaleLowerCase()) ) // 包含就好
         : undefined;
 
     console.log(findUsers);
