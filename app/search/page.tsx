@@ -3,7 +3,7 @@ import React from 'react'
 import styles from './page.module.css'
 import Link from 'next/link';
 
-const Page: React.FC = () => {
+const Page: React.FC = (props) => {
   const users = [
     {
       name: 'John Syket',
@@ -16,12 +16,12 @@ const Page: React.FC = () => {
       designation: 'Programmer',
     },
     {
-      name: 'Jamy',
+      name: 'John Jamy',
       age: 30,
       designation: 'Designer',
     },
     {
-      name: 'Hanif',
+      name: 'Hanif Syket',
       age: 20,
       designation: 'UX Writer',
     },
@@ -51,6 +51,14 @@ const Page: React.FC = () => {
 
   return (
   <div>
+    {/* <div className = 'grid-container'>
+      { props.data.map((d, i) => (
+         <div className = 'grid-item'>
+            <displayName name={d.name} />
+         </div>
+       )}
+      </div> */}
+
     <div className={styles.title}> 
       <h1>User Find</h1><br />
       <Link href='/' className='p-2 bg-sky-400 text-white text-xl rounded-full hover:bg-sky-500 '>Back</Link>
@@ -72,22 +80,21 @@ const Page: React.FC = () => {
           <div className="notFound">No User Found</div>
         )}
 
-        <div className="grid-container">
+        
+        <div className={styles.wrapper}> 
         {userList &&
           userList?.length > 0 &&
           userList?.map((user) => {
             return (
-              
-                <div className="grid-item" key={user?.name}>
-              <div className="body__item" key={user?.name}> 
+              <div className={styles.body__item} key={user?.name}> 
                   <h3>Name: {user?.name}</h3>
                   <p>Age: {user?.age}</p>
-                  <p>Designation: {user?.designation}</p></div>
-                </div>
-              
+                  <p>Designation: {user?.designation}</p>
+              </div>
             );
           })}
           </div>
+          
 
         </div>
       

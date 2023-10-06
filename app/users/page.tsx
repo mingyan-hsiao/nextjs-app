@@ -3,11 +3,6 @@ import UserList from './UserList';
 import Link from 'next/link';
 import styles from './page.module.css';
 
-interface User {
-    id: number;
-    name: string;
-    email: string;
-}
 
 const UsersPage = async () => {return(
         <>

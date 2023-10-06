@@ -41,9 +41,11 @@
   text-align: left !important;
   border: 1px solid lightgray;
   padding: 20px;
-  width: 500px;
+  width: 100%;
   margin: 20px auto;
   display:flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .notFound {
@@ -70,4 +72,14 @@
   padding: 20px;
   font-size: 30px;
   text-align: center;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5%;
+  border: 1px solid #F0F0F0;
+  width: 100%;
+  margin: 0px;
+  
+  
 }
